@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bolu Pisang Lezat</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;700&display=swap" rel="stylesheet" />
+    <script src="https://unpkg.com/feather-icons"></script>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <nav class="navbar">
+        <a href="#" class="navbar-logo">bolu<span>pisang</span></a>
+        <div class="navbar-nav">
+            <a href="#home">Home</a>
+            <a href="#about">Tentang Kami</a>
+            <a href="#menu">Menu</a>
+            <a href="#contact">Kontak</a>
+        </div>
+        <div class="navbar-extra">
+            <a href="#" id="search"><i data-feather="search"></i></a>
+            <div class="search-form">
+                <input type="search" id="search-input" placeholder="Cari bolu favoritmu...">
+            </div>
+            
+            <a href="#" id="shopping" class="cart-icon-wrapper">
+                <i data-feather="shopping-cart"></i>
+                <span id="cart-count">0</span>
+            </a>
+            
+            <a href="#" id="hamburger-menu"><i data-feather="menu"></i></a>
+        </div>
+    </nav>
+
+    <section class="hero" id="home">
+        <main class="content">
+            <h1>Mari Nikmati Kelembutan <span>Bolu Pisang</span></h1>
+            <p>Dibuat dari pisang pilihan premium dengan resep otentik yang lumer di mulut.</p>
+            <a href="#menu" class="cta">Beli Sekarang</a>
+        </main>
+    </section>
+
+    <section class="about" id="about">
+        <h2>Tentang <span>Kami</span></h2>
+        <div class="row">
+            <div class="about-img">
+                <img src="yaho.jpg" alt="Tentang Kami" />
+            </div>
+            <div class="about-content">
+                <h3>Mengapa memilih bolu kami?</h3>
+                <p>Kami memproduksi bolu pisang homemade setiap hari secara segar (fresh from the oven) tanpa menggunakan bahan pengawet buatan.</p>
+                <p>Kombinasi tekstur yang super lembut dan aroma karamel pisang yang kuat dijamin akan memanjakan lidah Anda sejak gigitan pertama.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="menu" id="menu">
+        <h2>Menu Kami</h2>
+        <p>Pilih varian rasa bolu pisang favorit yang siap menemani momen santaimu.</p>
+        <div class="menu-row">
+            <div class="menu-card" data-name="Bolu Pisang Original">
+                <img src="gambar.jpg" alt="Bolu Pisang Original" class="product-img" />
+                <h3 class="menu-card-title">Bolu Pisang Original</h3>
+                <p class="price">IDR 35.000</p>
+                <button class="add-to-cart-btn" data-id="1" data-name="Bolu Pisang Original" data-price="35000" data-img="gambar.jpg">
+                    <i data-feather="shopping-cart"></i> + Keranjang
+                </button>
+            </div>
+            <div class="menu-card" data-name="Bolu Pisang Keju Premium">
+                <img src="semua.jpg" alt="Bolu Pisang Keju" class="product-img" />
+                <h3 class="menu-card-title">Bolu Pisang Keju Premium</h3>
+                <p class="price">IDR 45.000</p>
+                <button class="add-to-cart-btn" data-id="2" data-name="Bolu Pisang Keju Premium" data-price="45000" data-img="semua.jpg">
+                    <i data-feather="shopping-cart"></i> + Keranjang
+                </button>
+            </div>
+            <div class="menu-card" data-name="Bolu Pisang Choco-chips">
+                <img src="yuhu.jpg" alt="Bolu Pisang Choco-chips" class="product-img" />
+                <h3 class="menu-card-title">Bolu Pisang Choco-chips</h3>
+                <p class="price">IDR 42.000</p>
+                <button class="add-to-cart-btn" data-id="3" data-name="Bolu Pisang Choco-chips" data-price="42000" data-img="yuhu.jpg">
+                    <i data-feather="shopping-cart"></i> + Keranjang
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <div class="cart-modal" id="cart-modal">
+        <div class="cart-modal-content">
+            <div class="cart-modal-header">
+                <h3>Keranjang Belanja</h3>
+                <span class="close-modal">×</span>
+            </div>
+            <div class="cart-items-container" id="cart-items-container">
+                </div>
+            <div class="cart-modal-footer">
+                <div class="total-wrapper">
+                    <span>Total:</span>
+                    <span id="cart-total-price">IDR 0</span>
+                </div>
+                <button id="clear-cart-btn" class="clear-btn">Kosongkan Semua</button>
+            </div>
+        </div>
+    </div>
+
+    <section class="contact" id="contact">
+        <h2>Kontak Kami</h2>
+        <div class="row">
+           <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3963.3150550478044!2d106.77258387589574!3d-6.608930864603957!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69c4acc8e4a5bd%3A0xb88238206174ba7d!2sJl.%20Gunung%20Batu%2C%20Kota%20Bogor%2C%20Jawa%20Barat!5e0!3m2!1sid!2sid!4v1719180000000!5m2!1sid!2sid" allowfullscreen="" loading="lazy"></iframe>
+
+
+            <form id="contact-form">
+                <div class="input-group">
+                    <i data-feather="user"></i>
+                    <input type="text" name="name" placeholder="Nama" required />
+                </div>
+                <div class="input-group">
+                    <i data-feather="mail"></i>
+                    <input type="email" name="email" placeholder="Email" required />
+                </div>
+                <div class="input-group">
+                    <i data-feather="phone"></i>
+                    <input type="text" name="phone" placeholder="Nomor HP" required />
+                </div>
+                <button type="submit" class="btn">Kirim Pesan</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="socials">
+            <a href="https://www.instagram.com/brajasimpatika" target="_blank"><i data-feather="instagram"></i></a>
+            <a href="https://twitter.com/brajasimpatika" target="_blank"><i data-feather="twitter"></i></a>
+            <a href="https://www.tiktok.com/@brajasimpatika" target="_blank"><i data-feather="video"></i></a>
+        </div>
+        <div class="links">
+            <a href="#home">Home</a>
+            <a href="#about">Tentang Kami</a>
+            <a href="#menu">Menu</a>
+            <a href="#contact">Kontak</a>
+        </div>
+        <p class="copyright">Created by <a href="#">braja simpatika</a> | © 2026</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
